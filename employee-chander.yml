@@ -13,8 +13,13 @@ spring:
     date-format: yyyy-MM-dd
   messages:
     basename: i18n.login
+  rabbitmq:
+    host: 172.25.154.161
+    port: 15672
+    username: guest
+    password: guest
 server:
-  port: 8085
+  port: 8080
   tomcat:
     uri-encoding: UTF-8
   servlet:
