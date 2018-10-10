@@ -14,7 +14,7 @@ spring:
   messages:
     basename: i18n.login
 server:
-  port: 8080
+  port: 8085
   tomcat:
     uri-encoding: UTF-8
   servlet:
