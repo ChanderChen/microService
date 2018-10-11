@@ -1,5 +1,4 @@
-test_autorefresh: 
-  now i'am chander
+test_autorefresh: now i'am chander
 eureka:
   client:
     service-url:
