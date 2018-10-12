@@ -1,4 +1,4 @@
-chander： chenchuan
+chander: chenchuan
 spring:
   rabbitmq:
     host: 172.25.154.161
