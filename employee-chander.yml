@@ -1,4 +1,9 @@
-chander: I'am not chander,too asfasd
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka1:8761/eureka/,http://eureka2:8762/eureka/,http://eureka3:8763/eureka/
+  instance:
+    hostname: EmployeeClient
 spring:
   application:
     name: Employee
@@ -8,11 +13,6 @@ spring:
     date-format: yyyy-MM-dd
   messages:
     basename: i18n.login
-  rabbitmq:
-    host: 172.25.154.161
-    port: 5672
-    username: guest
-    password: guest
 server:
   port: 8080
   tomcat:
