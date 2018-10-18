@@ -1,3 +1,10 @@
+spring:
+  rabbitmq:
+    host: 172.25.154.161
+    port: 5672
+    username: guest
+    password: guest
+    virtual-host: /
 zuul:
   routes:
     api1:
