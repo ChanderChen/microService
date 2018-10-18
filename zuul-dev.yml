@@ -3,8 +3,7 @@ zuul:
     api1:
       path: /employeeRoute/**
       serviceId: employee
-    ##简洁写法
-#  ignored-patterns:
-#    - /employeeRoute/autorefresh
-#    - /employee/autorefresh
-#    employee: /employeeRoute/**
+
+  ignored-patterns:
+    - /employeeRoute/autorefresh
+    - /employee/autorefresh
