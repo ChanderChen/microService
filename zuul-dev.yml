@@ -12,5 +12,5 @@ zuul:
       serviceId: employee
 
   ignored-patterns:
-    - /employeeRoute/autorefresh
-    - /employee/autorefresh
+#    - /employeeRoute/autorefresh
+#    - /employee/autorefresh
