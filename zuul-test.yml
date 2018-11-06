@@ -1,1 +1,24 @@
+#      可通过zuul.routes.名称.path和zuul.routes.名称.serviceId指定访问微服务对应的url路径：
+zuul:
+  routes:
+    api1:   #此处名子可以任意取
+      path: /chander1/**      #自定义代理访问时url的前缀
+      serviceId: feign-client   #服务名  将服务feign-client的所有url访问映射为/chander/....
+
+    ##简洁写法(如果只有path，和serviceId两个属性，则可以简写为以下形式
+    eureka-client: /chander/**    #注意：映射名不能重复，否则映射会绑定在第一次出现的服务商。将访问eureka-client服务的所有url映射为/chander/....
+  ignored-patterns:  #对哪些请求不做代理
+  - /hystrix-ribbon-client/hystrix/restTemplateCall
+
+#防止代理访问超时
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 6000  #hystrix 默认超时时间设置
+ribbon:
+  ConnectTimeout: 3000
+  ReadTimeout: 60000
 
